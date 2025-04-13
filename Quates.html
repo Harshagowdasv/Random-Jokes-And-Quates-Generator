@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quates Generator📖</title>
+</head>
+
+<style>
+    body{
+        background: linear-gradient(to right,violet,pink);
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        justify-content: center;
+        justify-items: center;
+    }
+
+    button{
+        padding: 10px 15px;
+        width: 140px;
+        background: linear-gradient(to right,pink,white);
+        cursor: pointer;
+        border-radius: 15px;
+        align-self: center;
+
+    }
+
+    button:hover{
+        background: linear-gradient(to left,pink,white);
+    }
+
+    .container{
+        box-shadow: 0 0 10px rgba(0,0,0,0.4);
+        width: 60%;
+        height: 300px;
+        align-self: center;
+        border-radius: 15px;
+    }
+
+    .result{
+        justify-content: center;
+        display: grid;
+        gap: 10px;
+    }
+
+    .result button{
+        padding: 10px 15px;
+        width: 140px;
+        background: linear-gradient(to right,pink,white);
+        cursor: pointer;
+        border-radius: 15px;
+        align-self: center;
+    }
+
+    .result button:hover{
+        background: linear-gradient(to left,pink,white);
+    }
+
+    .res p{
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bolder;
+        width: auto;
+        height: auto;
+        margin-top: 7%;
+
+    }
+
+    span{
+        box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        border-radius: 10px;
+    }
+
+    @media(max-width:640px){
+        .container{
+            margin-top: 21%;
+            box-shadow: 0 0 10px rgba(0,0,0,0.4);
+            width: 60%;
+            height: 300px;
+            align-self: center;
+            border-radius: 15px;
+        }
+
+    }
+</style>
+<body>
+    <a href="./index.html"><button>Back</button></a>
+    <head>
+        <h1>Quates Generator📖</h1>
+    </head>
+    
+    <div class="container">
+        <div class="result">
+            <h2>Quates</h2>
+            <button id="Generatebtn">Generate Quates</button>
+        </div>
+
+        <div class="res">
+            <h3 id="result"></h3>
+
+        </div>
+
+    </div>
+</body>
+
+<script>
+    const quates=[
+    {
+        "quate": "Be yourself; everyone else is already taken.",
+        "Author": "Oscar Wilde"
+    },
+    {
+        "quate": "Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.",
+        "Author": "Albert Einstein"
+    },
+    {
+        "quate": "So many books, so little time.",
+        "Author": "Frank Zappa"
+    },
+    {
+        "quate": "A room without books is like a body without a soul.",
+        "Author": "Marcus Tullius Cicero"
+    },
+    {
+        "quate": "Be the change that you wish to see in the world.",
+        "Author": "Mahatma Gandhi"
+    },
+    {
+        "quate": "If you tell the truth, you don't have to remember anything.",
+        "Author": "Mark Twain"
+    },
+    {
+        "quate": "In three words I can sum up everything I've learned about life: it goes on.",
+        "Author": "Robert Frost"
+    },
+    {
+        "quate": "Live as if you were to die tomorrow. Learn as if you were to live forever.",
+        "Author": "Mahatma Gandhi"
+    },
+    {
+        "quate": "Without music, life would be a mistake.",
+        "Author": "Friedrich Nietzsche"
+    },
+    {
+        "quate": "We accept the love we think we deserve.",
+        "Author": "Stephen Chbosky"
+    },
+    {
+        "quate": "It is never too late to be what you might have been.",
+        "Author": "George Eliot"
+    },
+    {
+        "quate": "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+        "Author": "Winston Churchill"
+    },
+    {
+        "quate": "The only way to do great work is to love what you do.",
+        "Author": "Steve Jobs"
+    },
+    {
+        "quate": "Do what you can, with what you have, where you are.",
+        "Author": "Theodore Roosevelt"
+    },
+    {
+        "quate": "Everything you’ve ever wanted is on the other side of fear.",
+        "Author": "George Addair"
+    },
+    {
+        "quate": "Happiness is not something ready made. It comes from your own actions.",
+        "Author": "Dalai Lama"
+    },
+    {
+        "quate": "What we think, we become.",
+        "Author": "Buddha"
+    },
+    {
+        "quate": "Dream big and dare to fail.",
+        "Author": "Norman Vaughan"
+    },
+    {
+        "quate": "Act as if what you do makes a difference. It does.",
+        "Author": "William James"
+    },
+    {
+        "quate": "Turn your wounds into wisdom.",
+        "Author": "Oprah Winfrey"
+    }
+];
+
+
+document.getElementById("Generatebtn").addEventListener("click",()=>{
+    let value=Math.floor(Math.random()*21);
+    let Rquate=quates[value].quate;
+    let Rauthor=quates[value].Author;
+    document.getElementById("result").innerHTML=`
+    <p>"${Rquate}"</p>
+    <span id"aname">-${Rauthor}</span>`;
+
+});
+</script>
+</html>
